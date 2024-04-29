@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Prompt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('img/2948784-pixel-minecraft-style-land-background-vetor.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px; 
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ccc;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="submit"] {
+            width: calc(100% - 26px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            padding-left: 40px; 
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .icon {
+            position: absolute;
+            top: 13px;
+            left: 10px;
+            color: #888;
+        }
+        #mensagem {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .forgot-password {
+            text-align: center;
+            margin-top: 10px;
+            color: #333;
+        }
+        .forgot-password a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Método Prompt</h1>
+
+        <form action="#.php" method="get">
+            <label for="Login">Login</label>
+            <div style="position: relative;">
+                <i class="fas fa-user icon"></i>
+                <input type="text" name="Login" id="Login" placeholder="Seu usuário">
+            </div><br>
+            <label for="Senha">Senha</label>
+            <div style="position: relative;">
+                <i class="fas fa-lock icon"></i>
+                <input type="password" name="Senha" id="Senha" placeholder="Sua senha">
+            </div><br>
+            <input type="submit" value="Enviar" onclick="autenticar()">
+        </form>
+        <div id="mensagem"></div>
+        <div class="forgot-password">
+            <a href="#">Esqueci minha senha</a>
+        </div>
+    </div>
